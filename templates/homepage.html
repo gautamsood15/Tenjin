@@ -1,6 +1,8 @@
 {% extends 'layouts/page.html' %}
 
 {% block content %}
+<div class="page">
+<div class="title">All Questions</div>
 
 
 {% for question in questions %}
@@ -15,7 +17,7 @@
     </a>
 </div>
 {% endfor %}
-
+</div>
 
 
 {% endblock %}
