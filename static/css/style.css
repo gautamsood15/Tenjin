@@ -1,28 +1,149 @@
 html,
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(230, 224, 224);
+
 }
 
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+#button-id {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+
+
+#li-button-logout {
+    margin-left: 10px;
+    background-color: rgb(221, 36, 36);
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}
+
+#li-button-logout:hover {
+    background-color: rgb(202, 27, 27);
+}
+
+#li-button-signup {
+    margin-left: 30px;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+
+}
+
+#li-button-signup:hover {
+    background-color: #0568d2;
+}
+
+#li-button-login {
+    margin-left: 30px;
+    background-color: #00c12ad5;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    
+}
+#li-button-login:hover {
+    background-color: rgb(0, 152, 10);
+}
+
+
+
+#li-id {
+    margin-right: 10px;
+}
+
+#li-id:hover {
+    background-color: gray;
+    border-radius: 5px;
+    transition: background-color 1s;
+}
 
 *, *::after, *::before {
     box-sizing: border-box;
 
 }
 
-.main {
-    max-width: 800px;
-    margin: 60px auto;
+.question-link {
+    text-decoration: none;
+}
+
+.question-link:hover {
+    text-decoration: none;
+}
+
+.main{
+    max-width: 1000px;
+    margin: 20px auto;
     padding: 24px;
     border-radius: 20px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     position: relative;
     top: 0px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    transition: top 0.3s;
+    transition: top 0.3s;    
+}
+
+.main-register {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 24px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+   
 }
 
 .main:hover {
     box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
-    top: -5px;
+    top: -10px;
+    
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.title {
+    margin: 20px auto 30px auto;
+    font-weight: 900;
+}
+
+.question-list-item-title {
+    color: black;
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 5px;
+}
+
+
+.question-list-item-author {
+    color: gray;
+    margin: 0;
+}
+
+.register_logo {
+    margin-right: 1.5em;
 }

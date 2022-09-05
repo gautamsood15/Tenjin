@@ -7,15 +7,18 @@
 
 {% for question in questions %}
 <div class="question-list-item">
-    <a href="{% url 'question' question.id %}">
-        <p class="question-list-item-title">
-            {{question.title}}
-        </p>
-        <p class="question-list-item-author">
-            {{question.author.username}}
-        </p>
-    </a>
+    <div class="main">
+        <a class="question-link" href="{% url 'question' question.id %}">
+            <p class="question-list-item-title">
+                {{question.title}}
+            </p>
+            <p class="question-list-item-author">
+                by {{question.author.username}}
+            </p>
+        </a>
+    </div>
 </div>
+
 {% endfor %}
 </div>
 
