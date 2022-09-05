@@ -1,8 +1,9 @@
 {% extends 'layouts/page.html' %}
 
 {% block content %}
+{% load static %}
 <div class="page">
-<div class="title">All Questions</div>
+<div class="title"><img class="register_logo" src="{% static 'image/logo.webp' %}" alt="" width="45px" height="45px">All Questions</div>
 
 
 {% for question in questions %}

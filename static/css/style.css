@@ -105,12 +105,12 @@ body {
 }
 
 .main-register {
-    max-width: 600px;
+    max-width: 400px;
     margin: 20px auto;
     padding: 24px;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 32px 64px 0 rgba(0,0,0,0.2);
    
 }
 
@@ -127,8 +127,12 @@ body {
 }
 
 .title {
-    margin: 20px auto 30px auto;
+    margin: 10px auto 5px auto;
     font-weight: 900;
+    transition: color 0.5s;
+}
+.title:hover {
+    color: #7b7c7d;
 }
 
 .question-list-item-title {
@@ -146,4 +150,25 @@ body {
 
 .register_logo {
     margin-right: 1.5em;
+    transition: 0.2s;
+}
+
+.register_logo:hover {
+    padding: 2px;
+}
+
+
+
+
+.error {
+    font-size: 14px;
+    color: rgb(209, 1, 1);
+    list-style: none;
+}
+
+
+
+.non_form_errors {
+    margin-bottom: 20px;
+    list-style: none;
 }
