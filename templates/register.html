@@ -16,37 +16,37 @@
       {% csrf_token %}
       
 
-      <div class="fieldWrapper">
+      <div>
         <label for="{{form.email.id_for_label}}">Email</label><br>
         {{form.email}}
-        <!-- <span class="error">{{form.email.errors}}</span> -->
+        <span class="error">{{form.email.errors}}</span>
       </div>
       <br>
-      <div class="fieldWrapper">
+      <div>
         <label for="{{form.username.id_for_label}}">Username</label><br>
         {{form.username}}
-        <!-- <span class="error">{{form.username.errors}}</span> -->
+        <span class="error">{{form.username.errors}}</span>
       </div>
       <br>
-      <div class="fieldWrapper">
+      <div>
         <label for="{{form.password1.id_for_label}}">Password</label><br>
         {{form.password1}}
-        <!-- <span class="error">{{form.password1.errors}}</span> -->
+        <span class="error">{{form.password1.errors}}</span>
       </div>
       <br>
-      <div class="fieldWrapper">
+      <div>
         <label for="{{form.password2.id_for_label}}">Confirm Password</label><br>
         {{form.password2}}
-        <!-- <span class="error">{{form.password2.errors}}</span> -->
+        <span class="error">{{form.password2.errors}}</span>
       </div>
  
       <br>
       
-      <!-- {% if form.non_field_errors %}
+      {% if form.non_field_errors %}
       <div class="non_form_errors">
         <span class="error">{{form.non_field_errors.as_ul}}</span>
       </div>
-      {% endif %} -->
+      {% endif %}
       
       
       

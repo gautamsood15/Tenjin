@@ -1,0 +1,56 @@
+{% extends 'layouts/page.html' %}
+
+{% block content %}
+{% load static %}
+<div class="page">
+    <div class="title"><img class="register_logo" src="{% static 'image/logo.webp' %}" alt="" width="45px" height="45px">Login To Your Account !</div>
+
+
+    <br> 
+
+
+    <div class="question-list-item">
+        <div class="main-register">
+
+            <form method="POST" action="">
+            {% csrf_token %}
+            
+
+                <div>
+                    <label for="{{form.email.id_for_label}}">Username</label><br>
+                    {{form.username}}
+                    <span class="error">{{form.username.errors}}</span>  
+                </div>
+                <br>
+                <div>
+                    <label for="{{form.username.id_for_label}}">Password</label><br>
+                    {{form.password}}
+                    <span class="error">{{form.username.errors}}</span>
+                </div>
+                <br>
+                
+
+                {% if form.non_field_errors %}
+                <div class="non_form_errors">
+                    <span class="error">{{form.non_field_errors.as_ul}}</span>
+                </div>
+                {% endif %}
+                
+                
+                
+                <button type="submit" class="btn btn-success">Login</button>
+
+
+
+
+            </form>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

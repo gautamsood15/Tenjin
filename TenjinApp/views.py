@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from .models import Question
-from .forms import RegisterUserForm
+from .forms import RegisterUserForm, LoginForm
 
 # Create your views here.
 
@@ -30,8 +30,33 @@ def registerPage(request):
 
 
 def loginPage(request):
-    context = {}
-    return render(request, 'login.html', context)
+
+    form = LoginForm()
+
+    if request.method == 'POST':
+        try:
+            form = LoginForm(data=request.POST)
+            if form.is_valid():
+                user = form.get_user()
+                login(request, user)
+                return redirect('index')
+        except Exception as e:
+            print(e)
+            raise
+
+    
+    context = {
+        'form': form
+    }
+    return render(request, "login.html", context)
+
+
+
+
+def logoutPage(request):
+    logout(request)
+    return redirect('login')
+
 
 
 

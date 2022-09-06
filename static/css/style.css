@@ -41,7 +41,7 @@ body {
 }
 
 #li-button-logout:hover {
-    background-color: rgb(202, 27, 27);
+    background-color: rgb(170, 21, 21);
 }
 
 #li-button-signup {
@@ -53,18 +53,18 @@ body {
 }
 
 #li-button-signup:hover {
-    background-color: #0568d2;
+    background-color: #0255ae;
 }
 
 #li-button-login {
     margin-left: 30px;
-    background-color: #00c12ad5;
+    background-color: #28a745;
     border-radius: 5px;
     transition: background-color 0.5s;
     
 }
 #li-button-login:hover {
-    background-color: rgb(0, 152, 10);
+    background-color: #1c7e33;
 }
 
 
@@ -110,7 +110,7 @@ body {
     padding: 24px;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 32px 64px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
    
 }
 
@@ -163,12 +163,14 @@ body {
 .error {
     font-size: 14px;
     color: rgb(209, 1, 1);
-    list-style: none;
 }
 
+.errorlist {
+    margin: 0;
+}
 
 
 .non_form_errors {
     margin-bottom: 20px;
-    list-style: none;
+   
 }
