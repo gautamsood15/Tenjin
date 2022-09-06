@@ -3,19 +3,19 @@
     <small class="question-list-item-author">by {{response.user.username}}</small>
 
     {% if user.is_authenticated %}
-    <button type="submit" class="btn btn-dark">Reply</button>
+    <button type="submit" class="btn btn-dark" onclick="handleReplyButton(response.id)">Reply</button>
     
     {% endif %}
 
     <blockquote id="reply-form-container-{{response.id}}" class="reply-form-container">
         <form action="/reply" class="reply-form" method="POST">
         {% csrf_token %}
-        <input type="hidden" name="question" value={{question.id}}/>
-        <input type="hidden" name="parent" value={{response.id}}/>
+        <input type="hidden" name="question" value="{{question.id}}"/>
+        <input type="hidden" name="parent" value="{{response.id}}"/>
         <br>
         {{reply_form.body}}
-        <button type="submit" class="btn btn-dark">Reply</button>
-        <button type="submit" class="btn btn-danger">Cancel</button>
+        <button type="submit" class="btn btn-dark" style="margin-top: -25px;">Reply</button>
+        <button type="submit" class="btn btn-danger" style="margin-top: -25px;" onclick="handleCancelReply(response.id)">Cancel</button>
         </form> 
     </blockquote>
 
@@ -24,5 +24,5 @@
     {% for children in response.get_responses %}
     {% include 'components/response.html' with response=children %}
     {% endfor %}
- 
+  
 </blockquote>

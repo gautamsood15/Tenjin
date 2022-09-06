@@ -196,7 +196,7 @@ body {
 
 
 blockquote {
-    border-left: 1px solid lightgray;
-    padding-left: 6px;
-    margin-left: 15px;
+    border-left: 3px solid lightgray;
+    padding-left: 20px;
 }
+
