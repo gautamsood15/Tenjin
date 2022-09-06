@@ -148,6 +148,7 @@ body {
     margin: 10px auto 5px auto;
     font-weight: 900;
     transition: color 0.5s;
+    text-align: center;
 }
 .title:hover {
     color: #7b7c7d;
@@ -191,4 +192,11 @@ body {
 .non_form_errors {
     margin-bottom: 20px;
    
+}
+
+
+blockquote {
+    border-left: 1px solid lightgray;
+    padding-left: 6px;
+    margin-left: 15px;
 }

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from .models import Question
-from .forms import RegisterUserForm, LoginForm, NewQuestionForm, NewResponseForm
+from .forms import RegisterUserForm, LoginForm, NewQuestionForm, NewResponseForm, NewReplyForm
 
 # Create your views here.
 
@@ -98,6 +98,7 @@ def homePage(request):
 
 def questionPage(request, id):
     response_form = NewResponseForm()
+    reply_form = NewReplyForm()
 
     if request.method == 'POST':
         try:
@@ -115,6 +116,7 @@ def questionPage(request, id):
     question = Question.objects.get(id=id)
     context = {
         'question': question,
-        'response_form': response_form
+        'response_form': response_form,
+        'reply_form': reply_form,
     }
     return render(request, 'question.html', context)

@@ -89,3 +89,17 @@ class NewResponseForm(forms.ModelForm):
                 'style': 'width: 950px; height: 100px; outline: none; padding: 7px;'}),
 
         }
+
+class NewReplyForm(forms.ModelForm):
+    class Meta:
+        model = Response
+        fields = ['body']
+
+        widgets = {
+            'body': forms.Textarea(attrs={
+                'rows': 2,
+                'required': True,
+                'placeholder': 'What are your thoughts ?',
+                'style': 'width: 700px; height: 100px; outline: none; padding: 7px;'}),
+
+        }
