@@ -1,0 +1,66 @@
+{% extends 'layouts/page.html' %}
+
+{% block content %}
+{% load static %}
+<div class="page">
+    <div class="title"><img class="register_logo" src="{% static 'image/logo.webp' %}" alt="" width="45px" height="45px">What is your query ?</div>
+
+
+    
+<br>
+
+<div class="question-list-item">
+  <div class="main-question">
+
+    <form method="POST" action="">
+      {% csrf_token %}
+      
+
+      <div>
+        <label for="{{form.title.id_for_label}}">Subject</label><br>
+        {{form.title}}
+        
+      </div>
+      <br>
+      <div>
+        <label for="{{form.body.id_for_label}}">Body</label><br>
+        {{form.body}}
+        
+      </div>
+      <br>
+      
+      
+      <button type="submit" class="btn btn-primary">Ask</button>
+
+
+
+
+    </form>
+
+
+<!--     <br>
+    
+    <form method="POST" action="">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        
+        <br>
+        
+        <button type="submit" class="btn btn-primary">SignUp</button>
+    </form> -->
+
+  </div>
+</div>
+</div>
+
+
+{% endblock %}

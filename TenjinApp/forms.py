@@ -1,6 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django import forms
+from .models import Question, Response
 from django.forms import TextInput, EmailInput
 
 
@@ -54,5 +55,37 @@ class LoginForm(AuthenticationForm):
 
 
 
+class NewQuestionForm(forms.ModelForm):
+    class Meta:
+        model = Question
+        fields = ['title', 'body']
+
+        widgets = {
+            'title': forms.TextInput(attrs={
+                'required': True, 
+                'placeholder': 'Subject', 
+                'style': 'width: 650px; height: 40px; outline: none; padding: 7px;' }), 
+            
+            'body': forms.Textarea(attrs={
+                'required': True,
+                'placeholder': 'Body',
+                'style': 'width: 650px; height: 200px; outline: none; padding: 7px;'}),
+
+        }
 
 
+
+
+
+class NewResponseForm(forms.ModelForm):
+    class Meta:
+        model = Response
+        fields = ['body']
+
+        widgets = {
+            'body': forms.Textarea(attrs={
+                'required': True,
+                'placeholder': 'Reply',
+                'style': 'width: 950px; height: 100px; outline: none; padding: 7px;'}),
+
+        }

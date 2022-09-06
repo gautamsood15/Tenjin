@@ -114,6 +114,24 @@ body {
    
 }
 
+.main-question {
+    max-width: 700px;
+    margin: -10px auto;
+    padding: 24px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.main-question-detail {
+    max-width: 1000px;
+    margin: -10px auto;
+    padding: 24px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 .main:hover {
     box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
     top: -10px;
