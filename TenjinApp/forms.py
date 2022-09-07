@@ -86,7 +86,7 @@ class NewResponseForm(forms.ModelForm):
             'body': forms.Textarea(attrs={
                 'required': True,
                 'placeholder': 'Reply',
-                'style': 'width: 950px; height: 100px; outline: none; padding: 7px;'}),
+                'style': 'width: 1150px; height: 100px; outline: none; padding: 7px;'}),
 
         }
 
@@ -100,6 +100,6 @@ class NewReplyForm(forms.ModelForm):
                 'rows': 2,
                 'required': True,
                 'placeholder': 'What are your thoughts ?',
-                'style': 'width: 700px; height: 100px; outline: none; padding: 7px;'}),
+                'style': 'width: 950px; height: 100px; outline: none; padding: 7px;'}),
 
         }

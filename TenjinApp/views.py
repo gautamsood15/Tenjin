@@ -144,3 +144,11 @@ def replyPage(request):
             raise
     
     return redirect('index')
+
+
+
+
+def searchPage(request):
+    context = {}
+    return render(request, "search.html", context)
+

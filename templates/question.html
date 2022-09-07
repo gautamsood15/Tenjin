@@ -6,12 +6,12 @@
     <br>
     <br>
 <div class="question-list-item">
-    <div class="main-question-detail">
+<div class="main-question-detail">
         <h3 class="title" style="margin-bottom: 20px;">{{question.title}}</h3>
         <p class="question-body">{{question.body}}</p>
         <span class="question-list-item-author">by {{question.author.username}}</span>
 
-    <div>
+<div>
 
 <hr>
 
@@ -30,11 +30,12 @@
 
         <button type="submit" class="btn btn-primary">Reply</button>
         </form>
+        <hr>
+        
         {% endif %}
 
 
 
-<hr>
 
 
 
@@ -47,12 +48,11 @@
                 {% for response in question.get_responses %}
                     {% include 'components/response.html' with response=response %}
                 {% endfor %}
-            {% endif %}
-
+            
         </div>
 
-
-    </div>
+        {% endif %}
+</div>
 </div>
 </div>
 

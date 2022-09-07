@@ -3,22 +3,29 @@
     <small class="question-list-item-author">by {{response.user.username}}</small>
 
     {% if user.is_authenticated %}
-    <button type="submit" class="btn btn-dark" onclick="handleReplyButton(response.id)">Reply</button>
+    <!-- <button type="submit" class="btn btn-dark" onclick="handleReplyButton(response.id)">Reply</button> -->
     
     {% endif %}
 
+    {% if user.is_authenticated %}
     <blockquote id="reply-form-container-{{response.id}}" class="reply-form-container">
         <form action="/reply" class="reply-form" method="POST">
         {% csrf_token %}
         <input type="hidden" name="question" value="{{question.id}}"/>
         <input type="hidden" name="parent" value="{{response.id}}"/>
         <br>
+    
+        <div style="display: flex; flex-direction: column;">
         {{reply_form.body}}
-        <button type="submit" class="btn btn-dark" style="margin-top: -25px;">Reply</button>
-        <button type="submit" class="btn btn-danger" style="margin-top: -25px;" onclick="handleCancelReply(response.id)">Cancel</button>
+            <div style="display: flex; flex-direction: row;">
+            <button type="submit" class="btn btn-dark" style="margin-top: 10px; margin-right: 5px;">Reply</button>
+            <button type="submit" class="btn btn-danger" onclick="handleCancelReply(response.id)" style="margin-top: 10px;">Cancel</button>
+            </div>
+        </div>
+
         </form> 
     </blockquote>
-
+    {% endif %}
     <hr>
 
     {% for children in response.get_responses %}

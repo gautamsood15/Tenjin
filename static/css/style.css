@@ -124,7 +124,7 @@ body {
 }
 
 .main-question-detail {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: -10px auto;
     padding: 24px;
     border-radius: 20px;
@@ -200,3 +200,75 @@ blockquote {
     padding-left: 20px;
 }
 
+
+
+
+.footer {
+    padding-top: 1rem;
+    background-color: #151514; }
+  
+.contact-box {
+    position: relative; }
+  
+.footer_f_icon {
+    color: #f7aa03;
+    width: 4rem;
+    font-size: 50px; }
+  
+.contact-box-title {
+    color: #f7aa03;
+    text-decoration: none;
+    font-size: 1.4rem; }
+
+.contact-box-title:hover {
+      color: #f7aa03; }
+  
+.contact-box-info {
+    padding: 0.4rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif; }
+  
+.contact-box-subtitle {
+    font-size: 1rem;
+    color: #525257;
+    text-decoration: none; }
+
+
+  
+.footer-bottom {
+    background-color: black; }
+
+.footer-bottom .copyright {
+      color: #525257;
+      font-weight: 600; }
+
+  
+#footercenter {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #706a5e; }
+    #footercenter a {
+      color: #f7aa03; }
+  
+.back-to-top {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    z-index: 9999;
+    color: #f7f1e3;
+    background-color: #f7aa03; }
+
+.back-to-top:hover {
+    color: #000428; }
+  
+#back_up {
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+
+  
