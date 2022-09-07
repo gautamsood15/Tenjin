@@ -86,7 +86,15 @@ def newQuestionPage(request):
 
 
 def homePage(request):
-    questions = Question.objects.all().order_by('-created_at')
+
+
+    if 'searchQuery' in request.GET:
+        q=request.GET['searchQuery']
+        questions = Question.objects.filter(title__icontains=q).order_by('-created_at')
+    
+    else:
+        questions = Question.objects.all().order_by('-created_at')
+
     context = {
         'questions': questions
     }
@@ -148,7 +156,5 @@ def replyPage(request):
 
 
 
-def searchPage(request):
-    context = {}
-    return render(request, "search.html", context)
+
 

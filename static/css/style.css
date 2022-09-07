@@ -1,7 +1,9 @@
 html,
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 
@@ -205,7 +207,8 @@ blockquote {
 
 .footer {
     padding-top: 1rem;
-    background-color: #151514; }
+    background-color: #151514; 
+}
   
 .contact-box {
     position: relative; }

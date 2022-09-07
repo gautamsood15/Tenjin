@@ -6,6 +6,19 @@
 
 
 <br>
+
+{% if not questions %}
+<div style="text-align: center;">
+    <br>
+    <img src="{% static 'image/error.webp' %}" alt="" width="300px">
+
+    
+    <h1>Cannot find any related quesries.</h1>
+    <h3>Try searching with some other words !</h3>
+</div>
+{% endif %}
+
+
 {% for question in questions %}
 <div class="question-list-item">
     <div class="main">
@@ -19,7 +32,6 @@
         </a>
     </div>
 </div>
-
 {% endfor %}
 </div>
 
